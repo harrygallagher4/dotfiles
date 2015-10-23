@@ -103,6 +103,7 @@ inoremap kj <esc>
 nnoremap <c-k><c-b> :Lexplore "getcwd()"<cr>
 nnoremap <leader><tab> :b #<cr>
 nnoremap <leader>w :w<cr>
+nnoremap <leader>q :wq<cr>
 
 " Auto commands
 au CompleteDone * pclose
