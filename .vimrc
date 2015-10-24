@@ -1,12 +1,7 @@
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
+set nocompatible               " Be iMproved
+set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 
-  set runtimepath+=/home/harry/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('/home/harry/.vim/bundle'))
+call neobundle#begin(expand('$HOME/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
