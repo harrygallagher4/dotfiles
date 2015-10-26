@@ -6,7 +6,7 @@ if has('vim_starting')
   set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('$HOME/harry/.vim/bundle'))
+call neobundle#begin(expand('$HOME/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
