@@ -102,20 +102,12 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-nnoremap <A-H> <C-w>H
-nnoremap <A-J> <C-w>J
-nnoremap <A-K> <C-w>K
-nnoremap <A-L> <C-w>L
 
 if has('nvim')
         tnoremap <A-h> <C-\><C-n><C-w>h
         tnoremap <A-j> <C-\><C-n><C-w>j
         tnoremap <A-k> <C-\><C-n><C-w>k
         tnoremap <A-l> <C-\><C-n><C-w>l
-        tnoremap <A-H> <C-\><C-n><C-w>H
-        tnoremap <A-J> <C-\><C-n><C-w>J
-        tnoremap <A-K> <C-\><C-n><C-w>K
-        tnoremap <A-L> <C-\><C-n><C-w>L
 endif
 
 " Key mappings
