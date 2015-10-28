@@ -39,7 +39,7 @@ NeoBundleCheck
 
 let mapleader = "\<Space>"
 syntax on
-colorscheme base16-tomorrow
+colorscheme base16-monokai
 let base16colorspace=256
 set background=dark
 
