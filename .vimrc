@@ -21,6 +21,7 @@ NeoBundle 'suan/vim-instant-markdown'
 
 " Language support
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'kchmck/vim-coffee-script'
 
