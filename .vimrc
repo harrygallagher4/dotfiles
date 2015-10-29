@@ -18,10 +18,12 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'suan/vim-instant-markdown'
+NeoBundle 'junegunn/goyo.vim'
 
 " Language support
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'tpope/vim-liquid'
 
 " Interface
 NeoBundle 'airblade/vim-gitgutter'
