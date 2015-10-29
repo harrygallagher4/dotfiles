@@ -116,6 +116,8 @@ endif
 " Key mappings
 inoremap jk <esc>
 inoremap kj <esc>
+nnoremap j gj
+nnoremap k gk
 nnoremap <c-k><c-b> :Lexplore "getcwd()"<cr>
 nnoremap <leader><tab> :b #<cr>
 nnoremap <leader>w :w<cr>
