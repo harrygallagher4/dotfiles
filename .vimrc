@@ -6,7 +6,7 @@ if has('vim_starting')
   set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('$HOME/harry/.vim/bundle'))
+call neobundle#begin(expand('$HOME/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -22,8 +22,10 @@ NeoBundle 'junegunn/goyo.vim'
 
 " Language support
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'tpope/vim-liquid'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " Interface
 NeoBundle 'airblade/vim-gitgutter'
@@ -40,7 +42,7 @@ NeoBundleCheck
 
 let mapleader = "\<Space>"
 syntax on
-colorscheme base16-tomorrow
+colorscheme base16-monokai
 let base16colorspace=256
 set background=dark
 
@@ -49,7 +51,6 @@ set backspace=2         " make backspace work
 set conceallevel=1      " enable conceal
 set concealcursor=nvic  " conceal even when the cursor is on an element
 set dir=~/.tmp          " store swap files in ~/.tmp
-set encoding=utf-8      " duh
 set expandtab           " tab -> spaces
 set hidden              " keep buffers around when closed
 set laststatus=2        " always show status line (airline)
@@ -99,6 +100,19 @@ let g:ctrlp_map = '<Leader>o'
 " vim-instant-markdown config
 let g:instant_markdown_autostart=0
 
+" window navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
+if has('nvim')
+        tnoremap <A-h> <C-\><C-n><C-w>h
+        tnoremap <A-j> <C-\><C-n><C-w>j
+        tnoremap <A-k> <C-\><C-n><C-w>k
+        tnoremap <A-l> <C-\><C-n><C-w>l
+endif
+
 " Key mappings
 inoremap jk <esc>
 inoremap kj <esc>
@@ -106,6 +120,7 @@ nnoremap <c-k><c-b> :Lexplore "getcwd()"<cr>
 nnoremap <leader><tab> :b #<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :wq<cr>
+nnoremap <return> :noh<cr>
 
 " Auto commands
 au CompleteDone * pclose
