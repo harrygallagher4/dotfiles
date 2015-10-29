@@ -105,6 +105,10 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+nnoremap <A-=> <C-w>=
+nnoremap <A-c> <C-w>c
+nnoremap <A-t> :vsp<cr>
+nnoremap <A-n> :sp<cr>
 
 if has('nvim')
         tnoremap <A-h> <C-\><C-n><C-w>h
