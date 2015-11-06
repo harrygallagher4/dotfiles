@@ -26,6 +26,7 @@ NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'tpope/vim-liquid'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'groovy.vim'
 
 " Interface
 NeoBundle 'airblade/vim-gitgutter'
@@ -48,12 +49,13 @@ set background=dark
 
 set autoread            " read changes to unmodified buffers
 set backspace=2         " make backspace work
-set conceallevel=1      " enable conceal
 set concealcursor=nvic  " conceal even when the cursor is on an element
+set conceallevel=1      " enable conceal
 set dir=~/.tmp          " store swap files in ~/.tmp
 set expandtab           " tab -> spaces
 set hidden              " keep buffers around when closed
 set laststatus=2        " always show status line (airline)
+set linebreak           " wrap at words
 set number              " show line numbers
 set numberwidth=4       " reserve 4 columns for line numbers
 set showcmd             " show commands in progress
