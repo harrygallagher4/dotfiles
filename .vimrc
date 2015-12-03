@@ -23,6 +23,7 @@ NeoBundle 'junegunn/goyo.vim'
 " Language support
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'mxw/vim-jsx'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'tpope/vim-liquid'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -77,11 +78,7 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol ='⚠'
 
 " vim-javascript config
-let g:javascript_conceal_function   = "𝑓"
 let g:javascript_conceal_null       = "ø"
-let g:javascript_conceal_return     = "↩"
-let g:javascript_conceal_super      = "Ω"
-let g:javascript_conceal_this       = "@"
 let g:javascript_conceal_undefined  = "¿"
 
 " Airline config
