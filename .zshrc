@@ -1,12 +1,10 @@
-export ZSH=/Users/harry/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="agnoster"
 
 plugins=(git osx)
 
 source $ZSH/oh-my-zsh.sh
-
-[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
 # Base16 Shell
 BASE16_CONTRAST="dark"
