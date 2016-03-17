@@ -31,7 +31,8 @@ NeoBundle 'groovy.vim'
 
 " Interface
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 
 " Color schemes
 NeoBundle 'chriskempson/base16-vim'
@@ -63,11 +64,7 @@ set showcmd             " show commands in progress
 set splitbelow          " horizontal-split windows below current
 set splitright          " vertical-split windows right of current
 set tabstop=4           " tab width
-
-" LD tagging
-set iskeyword+=-
-set iskeyword+=/
-set tags=./tags,tags;$HOME " walk up from current dir to ~ to find tags
+set shiftwidth=4        " fix tab width for >> and <<
 
 " Syntastic config 
 let g:syntastic_auto_loc_list=2
@@ -76,6 +73,7 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_enable_signs=1
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol ='⚠'
+let g:syntastic_javascript_checkers = ['eslint']
 
 " vim-javascript config
 let g:javascript_conceal_null       = "ø"
