@@ -8,7 +8,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Base16 Shell
 BASE16_CONTRAST="dark"
-BASE16_THEME="bright"
+BASE16_THEME="railscasts"
 BASE16_SHELL="$HOME/repos/base16-shell/base16-$BASE16_THEME.$BASE16_CONTRAST.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 

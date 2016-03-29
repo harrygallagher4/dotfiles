@@ -12,7 +12,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Functionality
 NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'benekastah/neomake'
 NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
@@ -45,7 +45,7 @@ NeoBundleCheck
 
 let mapleader = "\<Space>"
 syntax on
-colorscheme base16-bright
+colorscheme base16-railscasts
 let base16colorspace=256
 set background=dark
 
@@ -66,14 +66,7 @@ set splitright          " vertical-split windows right of current
 set tabstop=4           " tab width
 set shiftwidth=4        " fix tab width for >> and <<
 
-" Syntastic config 
-let g:syntastic_auto_loc_list=2
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_enable_signs=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol ='⚠'
-let g:syntastic_javascript_checkers = ['eslint']
+let g:neomake_javascript_enabled_makers = ['eslint']
 
 " vim-javascript config
 let g:javascript_conceal_null       = "ø"
@@ -84,7 +77,7 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 let g:airline_theme='base16'
 
-" Netrw config 
+" Netrw config
 let g:netrw_banner=0
 let g:netrw_browse_split=4
 let g:netrw_liststyle=3
@@ -120,12 +113,16 @@ inoremap kj <esc>
 nnoremap j gj
 nnoremap k gk
 nnoremap <c-k><c-b> :Lexplore "getcwd()"<cr>
+nnoremap <A-tab> :b #<cr>
 nnoremap <leader><tab> :b #<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :wq<cr>
 nnoremap <return> :noh<cr>
+vnoremap <return> <esc>
 
 " Auto commands
+au BufWritePost * Neomake
 au CompleteDone * pclose
 au FileType help wincmd L | 80wincmd | | se wfw
 au FileType netrw wincmd H | 35wincmd | | se wfw
+
