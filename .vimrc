@@ -2,46 +2,44 @@ if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
   endif
-
-  set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('$HOME/.vim/bundle'))
+set runtimepath+=/Users/harry/.vim/repos/github.com/Shougo/dein.vim/
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#begin('/Users/harry/.vim')
+
+call dein#add('Shougo/dein.vim/')
 
 " Functionality
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'benekastah/neomake'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'maksimr/vim-jsbeautify'
-NeoBundle 'suan/vim-instant-markdown'
-NeoBundle 'junegunn/goyo.vim'
+call dein#add('editorconfig/editorconfig-vim')
+call dein#add('benekastah/neomake')
+call dein#add('Raimondi/delimitMate')
+call dein#add('kien/ctrlp.vim')
+call dein#add('rking/ag.vim')
+call dein#add('maksimr/vim-jsbeautify')
+call dein#add('suan/vim-instant-markdown')
+call dein#add('junegunn/goyo.vim')
 
 " Language support
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'tpope/vim-liquid'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'groovy.vim'
+call dein#add('pangloss/vim-javascript')
+call dein#add('jelera/vim-javascript-syntax')
+call dein#add('mxw/vim-jsx')
+call dein#add('mustache/vim-mustache-handlebars')
+call dein#add('tpope/vim-liquid')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('groovy.vim')
 
 " Interface
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
+call dein#add('airblade/vim-gitgutter')
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
 
 " Color schemes
-NeoBundle 'chriskempson/base16-vim'
+call dein#add('chriskempson/base16-vim')
 
-call neobundle#end()
+call dein#end()
 
 filetype plugin indent on
-
-NeoBundleCheck
 
 let mapleader = "\<Space>"
 syntax on
