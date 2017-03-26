@@ -16,6 +16,8 @@ Plug 'rking/ag.vim'
 Plug 'suan/vim-instant-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'neomake/neomake'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Language support
 Plug 'pangloss/vim-javascript'
@@ -32,10 +34,11 @@ call plug#end()
 filetype plugin indent on
 
 let mapleader = "\<Space>"
-syntax on
-colorscheme base16-railscasts
+
+colorscheme base16-bright
 let base16colorspace=256
 set background=dark
+syntax on
 
 let g:gitgutter_override_sign_column_highlight=0
 highlight SignColumn            ctermbg=0 ctermfg=8  
@@ -45,26 +48,37 @@ highlight GitGutterDelete       ctermbg=0
 highlight GitGutterChangeDelete ctermbg=0
 highlight LineNr                ctermbg=0 ctermfg=8
 
-set laststatus=2        " always show status line
+set laststatus=2            " always show status line
 set statusline=%q%h\ %t\ %m%r\ %=%l:%c\ 
 highlight StatusLineNC          ctermbg=0 ctermfg=8
 highlight StatusLine            ctermbg=0 ctermfg=15
 
-set autoread            " read changes to unmodified buffers
-set backspace=2         " make backspace work in insert mode
-set dir=~/.tmp          " store swap files in ~/.tmp
-set expandtab           " tab -> spaces
-set hidden              " keep buffers around when closed
-set linebreak           " wrap at words
-set number              " show line numbers
-set numberwidth=4       " reserve 4 columns for line numbers
-set showcmd             " show commands in progress
-set splitbelow          " horizontal-split windows below current
-set splitright          " vertical-split windows right of current
-set tabstop=4           " tab width
-set shiftwidth=4        " fix tab width for >> and <<
-set colorcolumn=80      " highlight column 80
-set clipboard=unnamed
+set autoread                " read changes to unmodified buffers
+set dir=~/.tmp              " store swap files in ~/.tmp
+set hidden                  " keep buffers around when closed
+
+set linebreak               " wrap at words
+set number                  " show line numbers
+set numberwidth=4           " reserve 4 columns for line numbers
+set showcmd                 " show commands in progress
+
+set backspace=2             " make backspace work in insert mode
+set splitbelow              " horizontal-split windows below current
+set splitright              " vertical-split windows right of current
+
+set hlsearch                " highlight search matches
+set ignorecase              " ignore case in search
+set incsearch               " show search matches while typing
+set smartcase               " don't ignore case when we include an upper-case letter
+
+set expandtab               " tab -> spaces
+set shiftwidth=4            " fix tab width for >> and <<
+set smarttab                " tab uses tabstop, shiftwidth, and softtabstop
+set softtabstop=4           " represent tabs as two spaces
+set tabstop=4               " tab width
+
+set wildmenu                " use menu for tab completion
+set wildmode=longest,full   " don't use menu for first completion
 
 " Netrw config
 let g:netrw_banner=0
@@ -73,28 +87,26 @@ let g:netrw_liststyle=3
 let g:netrw_winsize= -35
 
 " CtrlP config
-let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_map = '<Leader>o'
+let g:ctrlp_working_path_mode='ra'
 
 " vim-instant-markdown config
 let g:instant_markdown_autostart=0
 
-" window navigation
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
-nnoremap <A-=> <C-w>=
-nnoremap <A-c> <C-w>c
-nnoremap <A-t> :vsp<cr>
-nnoremap <A-n> :sp<cr>
+" neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/bin/eslint'
+
+" windows
+nnoremap <c-w>\| :vnew<cr>
+nnoremap <c-w>\ :vnew<cr>
+nnoremap <c-w>- :new<cr>
+nnoremap <c-w>_ :new<cr>
+let g:tmux_navigator_disabled_when_zoomed = 1
 
 " Key mappings
 inoremap jk <esc>
-nnoremap j gj
-nnoremap k gk
-nnoremap <c-k><c-b> :Lexplore "getcwd()"<cr>
-nnoremap <A-tab> :b #<cr>
 nnoremap <leader><tab> :b #<cr>
 nnoremap <leader>w :w<cr>
-nnoremap <leader>q :wq<cr>
+nnoremap j gj
+nnoremap k gk
