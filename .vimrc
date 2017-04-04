@@ -35,7 +35,7 @@ filetype plugin indent on
 
 let mapleader = "\<Space>"
 
-colorscheme base16-bright
+colorscheme base16-3024
 let base16colorspace=256
 set background=dark
 syntax on
