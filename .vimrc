@@ -4,8 +4,6 @@ if has('vim_starting')
   endif
 endif
 
-set runtimepath+=/Users/harry/.vim/repos/github.com/Shougo/dein.vim/
-
 call plug#begin('~/.vim/plugins')
 
 " Functionality
