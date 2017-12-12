@@ -19,13 +19,13 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Language support
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-liquid'
 
 " Interface
+Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
-
-" Color schemes
-Plug 'chriskempson/base16-vim'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -33,26 +33,18 @@ filetype plugin indent on
 
 let mapleader = "\<Space>"
 
-colorscheme base16-3024
-let base16colorspace=256
+let g:lightline = { 'colorscheme': 'wombat' }
+colorscheme default 
 set background=dark
 syntax on
-
-let g:gitgutter_override_sign_column_highlight=0
-highlight SignColumn            ctermbg=0 ctermfg=8  
-highlight GitGutterAdd          ctermbg=0
-highlight GitGutterChange       ctermbg=0
-highlight GitGutterDelete       ctermbg=0
-highlight GitGutterChangeDelete ctermbg=0
-highlight LineNr                ctermbg=0 ctermfg=8
+let g:jsx_ext_required=0    " use jsx syntax for .js files
 
 set laststatus=2            " always show status line
-set statusline=%q%h\ %t\ %m%r\ %=%l:%c\ 
-highlight StatusLineNC          ctermbg=0 ctermfg=8
-highlight StatusLine            ctermbg=0 ctermfg=15
+set noshowmode              " don't show "INSERT"/etc. Disable if not using a statusline plugin 
 
 set autoread                " read changes to unmodified buffers
-set dir=~/.tmp              " store swap files in ~/.tmp
+set directory=~/.vim/backup " store swap files in ~/.vim/backup
+set backupdir=~/.vim/backup " store backup files in ~/.vim/backup
 set hidden                  " keep buffers around when closed
 
 set linebreak               " wrap at words
@@ -93,7 +85,6 @@ let g:instant_markdown_autostart=0
 
 " neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/bin/eslint'
 
 " windows
 nnoremap <c-w>\| :vnew<cr>
