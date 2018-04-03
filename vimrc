@@ -21,11 +21,13 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-liquid'
+Plug 'leafgarland/typescript-vim'
 
 " Interface
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+Plug 'harrygallagher4/lightline-terminal.vim'
 
 call plug#end()
 
@@ -33,10 +35,11 @@ filetype plugin indent on
 
 let mapleader = "\<Space>"
 
-let g:lightline = { 'colorscheme': 'wombat' }
-colorscheme default 
+let g:lightline = { 'colorscheme': 'terminal' }
+colorscheme desert
 set background=dark
 syntax on
+highlight LineNr ctermfg=8
 let g:jsx_ext_required=0    " use jsx syntax for .js files
 
 set laststatus=2            " always show status line
@@ -91,6 +94,7 @@ nnoremap <c-w>\| :vnew<cr>
 nnoremap <c-w>\ :vnew<cr>
 nnoremap <c-w>- :new<cr>
 nnoremap <c-w>_ :new<cr>
+nnoremap <c-x> :wincmd c<cr>
 let g:tmux_navigator_disabled_when_zoomed = 1
 
 " Key mappings
