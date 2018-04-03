@@ -24,6 +24,7 @@ Plug 'tpope/vim-liquid'
 Plug 'leafgarland/typescript-vim'
 
 " Interface
+Plug 'tpope/vim-vinegar'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
