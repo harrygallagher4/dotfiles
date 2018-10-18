@@ -11,7 +11,6 @@ export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:$HOME/scripts"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:/Users/harry/anaconda3/bin"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 
 ## 
@@ -47,12 +46,54 @@ export HOMEBREW_NO_GITHUB_API=1
 export VISUAL="vim"
 export EDITOR="vim"
 
+# alias mls (mac ls) to system ls
+alias mls=/bin/ls
+
+# alias ls to gls (gnu ls)
+alias ls="gls -N --color"
+
+# alias lx to list directories pretty.
+# -N: no quotes around files with spaces. this is probably bad but I think
+# that's ugly
+# -X: sort by extension
+# -p: trailing / on directories/
+# list directories first
+# colorize output
+alias lx="gls -NXp --group-directories-first --color"
+
 alias stat="stat -x"
 alias serve="python -m SimpleHTTPServer"
 alias git=hub
+alias pip=pip3
+alias python=python3
+
+function upgrade {
+    echo "MAS:"
+    mas outdated
+    echo "use 'mas upgrade' to upgrade these packages"
+    echo
+    echo "npm update -g"
+    echo "gem update"
+    echo "pip"
+}
+
+function brewski {
+    brew update
+    brew upgrade
+    brew cleanup -s
+    brew cask cleanup
+    brew doctor
+    brew missing
+}
 
 ##
 #  iTerm2
 ##
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+##
+#  Luna studio
+##
+
+export PATH=/Users/harry/.local/bin:$PATH
