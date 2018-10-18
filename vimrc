@@ -16,6 +16,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'neomake/neomake'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " Language support
 Plug 'pangloss/vim-javascript'
@@ -37,9 +38,9 @@ filetype plugin indent on
 let mapleader = "\<Space>"
 
 let g:lightline = { 'colorscheme': 'terminal' }
-colorscheme desert
-set background=dark
 syntax on
+colorscheme default 
+set background=dark
 highlight LineNr ctermfg=8
 let g:jsx_ext_required=0    " use jsx syntax for .js files
 
