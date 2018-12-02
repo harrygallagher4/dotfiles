@@ -59,7 +59,7 @@ alias ls="gls -N --color"
 # -p: trailing / on directories/
 # list directories first
 # colorize output
-alias lx="gls -NXp --group-directories-first --color"
+alias lx="gls --group-directories-first --color -NXp"
 
 alias stat="stat -x"
 alias serve="python -m SimpleHTTPServer"
