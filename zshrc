@@ -19,7 +19,7 @@ export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME=""
-plugins=(zsh-syntax-highlighting)
+plugins=(osx zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt pure
@@ -63,6 +63,7 @@ alias lx="gls --group-directories-first --color -NXp"
 
 alias stat="stat -x"
 alias serve="python -m SimpleHTTPServer"
+alias gman=man-preview
 alias git=hub
 alias pip=pip3
 alias python=python3
