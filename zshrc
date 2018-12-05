@@ -78,6 +78,8 @@ function upgrade {
     echo "pip"
 }
 
+alias brews="brew list -1"
+
 function brewski {
     brew update
     brew upgrade
