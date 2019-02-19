@@ -67,10 +67,10 @@ set incsearch               " show search matches while typing
 set smartcase               " don't ignore case when we include an upper-case letter
 
 set expandtab               " tab -> spaces
-set shiftwidth=4            " fix tab width for >> and <<
+set shiftwidth=2            " fix tab width for >> and <<
+set softtabstop=2           " represent tabs as two spaces
+set tabstop=2               " tab width
 set smarttab                " tab uses tabstop, shiftwidth, and softtabstop
-set softtabstop=4           " represent tabs as two spaces
-set tabstop=4               " tab width
 
 set wildmenu                " use menu for tab completion
 set wildmode=longest,full   " don't use menu for first completion
