@@ -31,6 +31,12 @@ prompt pure
 . "/usr/local/opt/nvm/nvm.sh"
 
 ##
+#  rbenv
+##
+
+eval "$(rbenv init -)"
+
+##
 #  Base16 Shell
 ## 
 
@@ -84,9 +90,12 @@ function brewski {
     brew update
     brew upgrade
     brew cleanup -s
-    brew cask cleanup
     brew doctor
     brew missing
+}
+
+function blockblock {
+    /Library/Objective-See/BlockBlock/BlockBlock.app/Contents/MacOS/BlockBlock -unhide
 }
 
 ##
@@ -95,8 +104,4 @@ function brewski {
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-##
-#  Luna studio
-##
 
-export PATH=/Users/harry/.local/bin:$PATH
