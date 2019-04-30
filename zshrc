@@ -68,12 +68,6 @@ export HOMEBREW_NO_GITHUB_API=1
 export VISUAL="vim"
 export EDITOR="vim"
 
-# alias mls (mac ls) to system ls
-alias mls=/bin/ls
-
-# alias ls to gls (gnu ls)
-alias ls="gls -N --color"
-
 # alias lx to list directories pretty.
 # -N: no quotes around files with spaces. this is probably bad but I think
 # that's ugly
@@ -83,7 +77,6 @@ alias ls="gls -N --color"
 # colorize output
 alias lx="gls --group-directories-first --color -NXp"
 
-alias stat="stat -x"
 alias serve="python -m SimpleHTTPServer"
 alias gman=man-preview
 alias git=hub
