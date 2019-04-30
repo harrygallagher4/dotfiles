@@ -7,11 +7,14 @@ export NVM_DIR="$HOME/.nvm"
 #  path
 ##
 
+export PATH="$PATH:/usr/local/opt/make/libexec/gnubin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:$HOME/scripts"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+
+export PKG_CONFIG_PATH=$(cat "$HOME/.pc_path")
 
 ## 
 #  oh-my-zsh
