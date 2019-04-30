@@ -1,4 +1,4 @@
-#!/bin/zsh
+autoload -U promptinit; promptinit
 
 export GOPATH="$HOME/.go"
 export NVM_DIR="$HOME/.nvm"
@@ -18,11 +18,13 @@ export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 ##
 
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_THEME=""
-plugins=(osx zsh-syntax-highlighting)
+plugins=(osx zsh-syntax-highlighting brew)
+ZSH_THEME=powerlevel10k/powerlevel10k
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 source $ZSH/oh-my-zsh.sh
-autoload -U promptinit; promptinit
-prompt pure
+source ~/.purepower
+
+bindkey -v
 
 ## 
 #  NVM
