@@ -49,6 +49,16 @@ bindkey '^l' push-line-or-edit
 
 eval "$(rbenv init -)"
 
+##
+#  z
+##
+
+. /usr/local/etc/profile.d/z.sh
+
+##
+#  homebrew
+##
+
 export HOMEBREW_NO_GITHUB_API=1
 
 ##
