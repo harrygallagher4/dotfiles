@@ -1,4 +1,5 @@
 autoload -U promptinit; promptinit
+source ~/.fresh/build/shell.sh
 
 export GOPATH="$HOME/.go"
 export NVM_DIR="$HOME/.nvm"
