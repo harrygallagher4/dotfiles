@@ -23,13 +23,16 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-liquid'
 Plug 'leafgarland/typescript-vim'
+Plug 'asciidoc/vim-asciidoc'
 
 " Interface
 Plug 'tpope/vim-vinegar'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
-Plug 'harrygallagher4/lightline-terminal.vim'
+" Plug 'itchyny/lightline.vim'
+Plug 'jeffkreeftmeijer/vim-dim'
+" Plug 'romainl/flattened'
+" Plug 'harrygallagher4/lightline-terminal.vim'
 
 call plug#end()
 
@@ -37,7 +40,6 @@ filetype plugin indent on
 
 let mapleader = "\<Space>"
 
-let g:lightline = { 'colorscheme': 'terminal' }
 syntax on
 colorscheme default 
 set background=dark
@@ -45,7 +47,7 @@ highlight LineNr ctermfg=8
 let g:jsx_ext_required=0    " use jsx syntax for .js files
 
 set laststatus=2            " always show status line
-set noshowmode              " don't show "INSERT"/etc. Disable if not using a statusline plugin 
+"set noshowmode              " don't show "INSERT"/etc. Disable if not using a statusline plugin 
 
 set autoread                " read changes to unmodified buffers
 set directory=~/.vim/backup " store swap files in ~/.vim/backup
@@ -101,7 +103,26 @@ let g:tmux_navigator_disabled_when_zoomed = 1
 
 " Key mappings
 inoremap jk <esc>
-nnoremap <leader><tab> :b #<cr>
+nnoremap <tab> :b #<cr>
 nnoremap <leader>w :w<cr>
 nnoremap j gj
 nnoremap k gk
+
+autocmd BufRead,BufNewFile *.adoc set filetype=asciidoc
+
+set laststatus=2
+set statusline=
+set statusline+=%#function#\ %l
+"set statusline+=\ %*
+set statusline+=%#TabLineSel#\ ‹‹
+set statusline+=\ %f
+set statusline+=\ ››
+set statusline+=\ %m
+set statusline+=%#keyword#\ %F
+set statusline+=%=
+"set statusline+=\ %{LinterStatus()}
+set statusline+=\ ‹‹
+set statusline+=\ %{strftime('%R',getftime(expand('%')))}
+set statusline+=\ ::
+set statusline+=\ %n
+set statusline+=\ ››\ %*
