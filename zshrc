@@ -49,13 +49,6 @@ bindkey '^l' push-line-or-edit
 
 eval "$(rbenv init -)"
 
-##
-#  Base16 Shell
-## 
-
-# BASE16_SHELL="$HOME/repos/base16-shell/scripts/base16-bright.sh"
-# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
 export HOMEBREW_NO_GITHUB_API=1
 
 ##
