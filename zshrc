@@ -107,6 +107,21 @@ function blockblock {
     /Library/Objective-See/BlockBlock/BlockBlock.app/Contents/MacOS/BlockBlock -unhide
 }
 
+# new-executable
+function nex {
+  if [ ! -f "$1" ]; then
+    touch "$1";
+    chmod +x "$1";
+    vim "$1";
+  fi
+}
+
+# fixes some library issues with xcode command line tools
+# run after upgrading them
+function fix_clt {
+  sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+}
+
 ##
 #  iTerm2
 ##
