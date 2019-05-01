@@ -1,0 +1,28 @@
+# freshshell.com
+#
+# Examples:
+#
+#   fresh twe4ked/dotfiles shell/functions/\*
+#   fresh jasoncodes/dotfiles shell/aliases/rails.sh
+#   fresh jasoncodes/dotfiles config/tmux.conf --file
+#
+# See http://freshshell.com/readme for documentation.
+
+fresh freshshell/fresh bin/fresh --bin
+
+fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
+
+fresh zshrc --file
+
+fresh-options --file=~/.zshrc --marker="###" --filter="perl -pe 'chomp if eof'"
+  fresh bindings/\*.zsh
+  fresh variables/*.zsh
+  fresh aliases/\*.zsh
+  fresh functions/\*.zsh
+fresh-options
+
+fresh vimrc --file
+
+fresh harrygallagher4/homebrew-pkgconfig-path homebrew-pkgconfig-path.zsh --bin=~/bin/homebrew-pkgconfig-path
+fresh harrygallagher4/gravatar.sh gravatar.sh --bin=~/bin/gravatar
+
