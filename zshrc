@@ -87,6 +87,7 @@ alias gman=man-preview
 alias git=hub
 alias pip=pip3
 alias python=python3
+alias brews="brew list -1"
 
 function upgrade {
     echo "MAS:"
@@ -97,8 +98,6 @@ function upgrade {
     echo "gem update"
     echo "pip"
 }
-
-alias brews="brew list -1"
 
 function brewski {
     brew update
