@@ -42,6 +42,7 @@ let mapleader = "\<Space>"
 
 syntax on
 colorscheme default 
+set termguicolors
 set background=dark
 highlight LineNr ctermfg=8
 let g:jsx_ext_required=0    " use jsx syntax for .js files
