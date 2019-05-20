@@ -127,3 +127,28 @@ set statusline+=\ %{strftime('%R',getftime(expand('%')))}
 set statusline+=\ ::
 set statusline+=\ %n
 set statusline+=\ ››\ %*
+
+function! Icolorify(color)
+  normal `>a[0m
+  execute "normal `<i\<C-V>\<C-[>[" . a:color . "m"
+endfunction
+
+" Foreground
+command! -range CBlack   call Icolorify(30)
+command! -range CRed     call Icolorify(31)
+command! -range CGreen   call Icolorify(32)
+command! -range CYellow  call Icolorify(33)
+command! -range CBlue    call Icolorify(34)
+command! -range CMagenta call Icolorify(35)
+command! -range CCyan    call Icolorify(36)
+command! -range CWhite   call Icolorify(37)
+
+" Background
+command! -range CBlackBg   call Icolorify(40)
+command! -range CRedBg     call Icolorify(41)
+command! -range CGreenBg   call Icolorify(42)
+command! -range CYellowBg  call Icolorify(43)
+command! -range CBlueBg    call Icolorify(44)
+command! -range CMagentaBg call Icolorify(45)
+command! -range CCyanBg    call Icolorify(46)
+command! -range CWhiteBg   call Icolorify(47)

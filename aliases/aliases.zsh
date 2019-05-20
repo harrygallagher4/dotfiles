@@ -13,4 +13,4 @@ alias git=hub
 alias pip=pip3
 alias python=python3
 alias brews="brew list -1"
-
+alias vim="nvim"
