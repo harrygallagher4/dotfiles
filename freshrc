@@ -24,7 +24,11 @@ fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
 fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
 
 fresh vimrc --file
-fresh init.vim --file=~/.config/nvim/init.vim
+
+fresh-options --file=~/.config/nvim/init.vim
+  fresh init.vim
+  fresh nvim/\*.vim
+fresh-options
 
 fresh tmux.conf --file
 
