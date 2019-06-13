@@ -9,8 +9,8 @@ alias lx="gls --group-directories-first --color -NXp"
 
 alias serve="python -m SimpleHTTPServer"
 alias gman=man-preview
-alias git=hub
 alias pip=pip3
 alias python=python3
 alias brews="brew list -1"
 alias vim="nvim"
+eval "$(hub alias -s)"
