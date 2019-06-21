@@ -108,6 +108,11 @@ nnoremap <leader>w :w<cr>
 nnoremap j gj
 nnoremap k gk
 
+" edit (neo)vim settings
+nnoremap <leader>, :e ~/.dotfiles/init.vim<cr>
+" reload settingss
+nnoremap <leader>. :!fresh<cr>:source $MYVIMRC<cr>
+
 autocmd BufRead,BufNewFile *.adoc set filetype=asciidoc
 
 " reset cursor on leave
