@@ -59,34 +59,32 @@ set background=dark
 let g:jsx_ext_required=0    " use jsx syntax for .js files
 
 set autoread                " read changes to unmodified buffers
-set directory=~/.vim/backup " store swap files in ~/.vim/backup
-set backupdir=~/.vim/backup " store backup files in ~/.vim/backup
+set nobackup
+set writebackup
+set directory=~/.config/nvim/.backup " store swap files in ~/.vim/backup
+set backupdir=~/.config/nvim/.backup " store backup files in ~/.vim/backup
 set hidden                  " keep buffers around when closed
-
 set linebreak               " wrap at words
 set number                  " show line numbers
 set numberwidth=4           " reserve 4 columns for line numbers
-set cursorline
-set showcmd                 " show commands in progress
-
+set cursorline              " highlight column with curosr in it
+set noshowcmd                 " show commands in progress
 set backspace=2             " make backspace work in insert mode
-set splitbelow              " horizontal-split windows below current
-set splitright              " vertical-split windows right of current
-
 set hlsearch                " highlight search matches
 set ignorecase              " ignore case in search
 set incsearch               " show search matches while typing
 set smartcase               " don't ignore case when we include an upper-case letter
-
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab               " tab -> spaces
-
 set wildmenu                " use menu for tab completion
 set wildmode=longest,full   " don't use menu for first completion
-
-" let g:deoplete#enable_at_startup = 1
+set pumheight=8
+set splitbelow
+set splitright
+set undofile
+set undodir=~/.config/nvim/.undofiles
 
 " windows
 nnoremap <c-w>\| :vnew<cr>
