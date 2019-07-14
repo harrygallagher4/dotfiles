@@ -14,7 +14,6 @@ Plug 'bhurlow/vim-parinfer'
 " Language support
 Plug 'tpope/vim-liquid'
 Plug 'sheerun/vim-polyglot'
-"Plug 'jpalardy/vim-slime'
 Plug 'l04m33/vlime', {'rtp': 'vim/'}
 
 " Interface
@@ -93,12 +92,6 @@ let g:startify_lists = [
   \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
   \ { 'type': 'sessions',  'header': ['   Sessions']       },
   \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      }]
-
-let g:slime_target = "neovim"
-let g:slime_no_mappings = 1
-xmap <c-c><c-c> <Plug>SlimeRegionSend
-nmap <c-c><c-c> <Plug>SlimeParagraphSend
-nmap <c-c>v     <Plug>SlimeConfig
 
 " windows
 nnoremap <c-`> :10new<cr>:term<cr>A
