@@ -29,7 +29,7 @@ filetype plugin indent on
 
 let mapleader = "\<Space>"
 
-function! s:base16_customize() abort
+function! Base16_customize() abort
   call Base16hi("LineNr", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
   call Base16hi("CursorLineNr", "", "", "", "", "bold,italic", "")
   call Base16hi("DiffAdd", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
@@ -42,12 +42,12 @@ function! s:base16_customize() abort
   call Base16hi("GitGutterText", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
 endfunction
 
-augroup on_change_colorschema
-  autocmd!
-  autocmd ColorScheme * call s:base16_customize()
+augroup base16_custom
+    autocmd!
+    autocmd ColorScheme base16-* call Base16_customize()
 augroup END
 
-syntax on
+"syntax on
 set termguicolors
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
