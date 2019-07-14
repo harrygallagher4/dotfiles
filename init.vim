@@ -96,6 +96,9 @@ let g:startify_lists = [
 " windows
 nnoremap <c-`> :10new<cr>:term<cr>A
 nnoremap \ :vnew<cr>
+" my brain likes to use shift+\ instead of \ but I still think the
+" binding makes sense. maybe one day my muscle memory will change
+nnoremap \| :vnew<cr>
 nnoremap - :new<cr>
 
 nnoremap <c-x> :wincmd c<cr>
@@ -113,6 +116,10 @@ tnoremap <c-k> <c-\><c-n><c-w>k
 
 nnoremap <c-l> <c-w>l
 tnoremap <c-l> <c-\><c-n><c-w>l
+
+" tabs
+nnoremap } :+tabnext<cr>
+nnoremap { :-tabnext<cr>
 
 " Key mappings
 inoremap jk <esc>
