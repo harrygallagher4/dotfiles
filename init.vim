@@ -94,6 +94,12 @@ let g:startify_lists = [
   \ { 'type': 'sessions',  'header': ['   Sessions']       },
   \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      }]
 
+let g:slime_target = "neovim"
+let g:slime_no_mappings = 1
+xmap <c-c><c-c> <Plug>SlimeRegionSend
+nmap <c-c><c-c> <Plug>SlimeParagraphSend
+nmap <c-c>v     <Plug>SlimeConfig
+
 " windows
 nnoremap <c-w>\| :vnew<cr>
 nnoremap <c-w>\ :vnew<cr>
