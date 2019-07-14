@@ -101,17 +101,30 @@ nmap <c-c><c-c> <Plug>SlimeParagraphSend
 nmap <c-c>v     <Plug>SlimeConfig
 
 " windows
-nnoremap <c-w>\| :vnew<cr>
-nnoremap <c-w>\ :vnew<cr>
-nnoremap <c-w>- :new<cr>
-nnoremap <c-w>_ :new<cr>
+nnoremap <c-`> :10new<cr>:term<cr>A
+nnoremap \ :vnew<cr>
+nnoremap - :new<cr>
+
 nnoremap <c-x> :wincmd c<cr>
-let g:tmux_navigator_disabled_when_zoomed = 1
+tnoremap <c-x> <c-\><c-n>:wincmd c<cr>
+
+" <c-hjkl> for window movement
+nnoremap <c-h> <c-w>h
+tnoremap <c-h> <c-\><c-n><c-w>h
+
+nnoremap <c-j> <c-w>j
+tnoremap <c-j> <c-\><c-n><c-w>j
+
+nnoremap <c-k> <c-w>k
+tnoremap <c-k> <c-\><c-n><c-w>k
+
+nnoremap <c-l> <c-w>l
+tnoremap <c-l> <c-\><c-n><c-w>l
 
 " Key mappings
 inoremap jk <esc>
-" inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
-" inoremap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
+inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
+inoremap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
 nnoremap <tab> :b #<cr>
 nnoremap <leader>w :w<cr>
 nnoremap j gj
