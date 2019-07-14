@@ -132,10 +132,47 @@ nnoremap k gk
 
 " edit (neo)vim settings
 nnoremap <leader>, :e ~/.dotfiles/init.vim<cr>
-" reload settingss
-nnoremap <leader>. :!fresh<cr>:source $MYVIMRC<cr>
 
-autocmd BufRead,BufNewFile *.adoc set filetype=asciidoc
+if !exists("g:autocmds_loaded")
+    augroup harry
+    autocmd!
+    let g:autocmds_loaded = 1
+
+    autocmd BufRead,BufNewFile *.adoc set filetype=asciidoc
+    autocmd BufWritePost */.dotfiles/init.vim execute 'silent !fresh >/dev/null'
+    autocmd TermOpen * set filetype=term
+    autocmd WinEnter term://* call MaybeStartInsertInTerminal()
+    augroup END
+endif
+
+function! MaybeStartInsertInTerminal()
+    if !exists('g:dont_start_insert_in_terminal')
+        startinsert
+    endif
+endfunction
+
+function! ResetCustomAutocmds()
+    augroup harry
+        autocmd!
+    augroup END
+    unlet g:autocmds_loaded 
+endfunction
+
+function! FindActiveTerminal()
+    let g:dont_start_insert_in_terminal=1
+    let g:last_window=bufwinid("%")
+    let g:active_terminal=0
+    windo call SetActiveTerminal()
+    call win_gotoid(g:last_window)
+    unlet g:dont_start_insert_in_terminal
+endfunction
+
+function! SetActiveTerminal()
+    if exists('b:terminal_job_id')
+        let g:active_terminal = b:terminal_job_id
+    endif
+    return 0
+endfunction
 
 " reset cursor on leave
 au VimLeave * set guicursor=a:hor8-blinkon1
