@@ -7,6 +7,7 @@ export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 export PATH="$PATH:$HOME/dev/flutter/bin"
+export PATH="$PATH:$HOME/.roswell/bin"
 
 if [[ -e "$HOME/.pc_path" ]]; then
   export PKG_CONFIG_PATH=$(cat "$HOME/.pc_path")
