@@ -3,24 +3,25 @@ set nocompatible
 call plug#begin('~/.config/nvim/plugins')
 
 " Functionality
-Plug 'editorconfig/editorconfig-vim'
 Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-slash'
-Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'bhurlow/vim-parinfer'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-slash'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'tpope/vim-surround'
 
 " Language support
-Plug 'tpope/vim-liquid'
-Plug 'sheerun/vim-polyglot'
 Plug 'l04m33/vlime', {'rtp': 'vim/'}
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-liquid'
 
 " Interface
-Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
-Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'chriskempson/base16-vim'
+Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -116,6 +117,10 @@ tnoremap <c-k> <c-\><c-n><c-w>k
 
 nnoremap <c-l> <c-w>l
 tnoremap <c-l> <c-\><c-n><c-w>l
+
+" tabs
+nnoremap <silent> <leader><c-l> :+tabnext<cr>
+nnoremap <silent> <leader><c-h> :-tabnext<cr>
 
 " Key mappings
 inoremap jk <esc>
