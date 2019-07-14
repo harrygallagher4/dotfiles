@@ -86,6 +86,14 @@ set splitright
 set undofile
 set undodir=~/.config/nvim/.undofiles
 
+let g:startify_customm_header = []
+let g:startify_bookmarks = [{',': '~/.dotfiles/init.vim'}]
+let g:startify_lists = [
+  \ { 'type': 'files',     'header': ['   MRU']            },
+  \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+  \ { 'type': 'sessions',  'header': ['   Sessions']       },
+  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      }]
+
 " windows
 nnoremap <c-w>\| :vnew<cr>
 nnoremap <c-w>\ :vnew<cr>
