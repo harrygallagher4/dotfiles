@@ -117,10 +117,6 @@ tnoremap <c-k> <c-\><c-n><c-w>k
 nnoremap <c-l> <c-w>l
 tnoremap <c-l> <c-\><c-n><c-w>l
 
-" tabs
-nnoremap } :+tabnext<cr>
-nnoremap { :-tabnext<cr>
-
 " Key mappings
 inoremap jk <esc>
 inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
