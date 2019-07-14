@@ -2,25 +2,22 @@ set nocompatible
 
 call plug#begin('~/.config/nvim/plugins')
 
-"if has('nvim')
-"  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"endif
-
 " Functionality
 Plug 'editorconfig/editorconfig-vim'
-Plug 'christoomey/vim-tmux-navigator'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-" Plug 'w0rp/ale'
 Plug 'junegunn/vim-slash'
 Plug 'tpope/vim-surround'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'bhurlow/vim-parinfer'
 
 " Language support
 Plug 'tpope/vim-liquid'
 Plug 'sheerun/vim-polyglot'
+"Plug 'jpalardy/vim-slime'
+Plug 'l04m33/vlime', {'rtp': 'vim/'}
 
 " Interface
-Plug 'tpope/vim-vinegar'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
 Plug 'jeffkreeftmeijer/vim-dim'
