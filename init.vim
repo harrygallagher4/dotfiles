@@ -19,7 +19,8 @@ Plug 'tpope/vim-liquid'
 
 " Interface
 Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
+Plug 'ayu-theme/ayu-vim'
+" Plug 'chriskempson/base16-vim'
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'mhinz/vim-startify'
 
@@ -29,57 +30,59 @@ filetype plugin indent on
 
 let mapleader = "\<Space>"
 
-function! Base16_customize() abort
-  call Base16hi("LineNr", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-  call Base16hi("CursorLineNr", "", "", "", "", "bold,italic", "")
-  call Base16hi("DiffAdd", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-  call Base16hi("DiffChange", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-  call Base16hi("DiffDelete", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-  call Base16hi("DiffText", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-  call Base16hi("GitGutterAdd", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-  call Base16hi("GitGutterChange", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-  call Base16hi("GitGutterDelete", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-  call Base16hi("GitGutterText", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-endfunction
+" function! Base16_customize() abort
+"   call Base16hi("LineNr", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
+"   call Base16hi("CursorLineNr", "", "", "", "", "bold,italic", "")
+"   call Base16hi("DiffAdd", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
+"   call Base16hi("DiffChange", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
+"   call Base16hi("DiffDelete", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
+"   call Base16hi("DiffText", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
+"   call Base16hi("GitGutterAdd", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
+"   call Base16hi("GitGutterChange", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
+"   call Base16hi("GitGutterDelete", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
+"   call Base16hi("GitGutterText", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
+" endfunction
 
-augroup base16_custom
-    autocmd!
-    autocmd ColorScheme base16-* call Base16_customize()
-augroup END
+" augroup base16_custom
+"     autocmd!
+"     autocmd ColorScheme base16-* call Base16_customize()
+" augroup END
 
 "syntax on
 set termguicolors
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+let ayucolor="mirage"
+" if filereadable(expand("~/.vimrc_background"))
+"   let base16colorspace=256
+"   source ~/.vimrc_background
+" endif
 set background=dark
+colorscheme ayu
 
 " highlight LineNr ctermfg=8
-let g:jsx_ext_required=0    " use jsx syntax for .js files
+let g:jsx_ext_required=0                 " use jsx syntax for .js files
 
-set autoread                " read changes to unmodified buffers
+set autoread                             " read changes to unmodified buffers
 set nobackup
 set writebackup
-set directory=~/.config/nvim/.backup " store swap files in ~/.vim/backup
-set backupdir=~/.config/nvim/.backup " store backup files in ~/.vim/backup
-set hidden                  " keep buffers around when closed
-set linebreak               " wrap at words
-set number                  " show line numbers
-set numberwidth=4           " reserve 4 columns for line numbers
-set cursorline              " highlight column with curosr in it
-set noshowcmd                 " show commands in progress
-set backspace=2             " make backspace work in insert mode
-set hlsearch                " highlight search matches
-set ignorecase              " ignore case in search
-set incsearch               " show search matches while typing
-set smartcase               " don't ignore case when we include an upper-case letter
+set directory=~/.config/nvim/.backup     " store swap files in ~/.vim/backup
+set backupdir=~/.config/nvim/.backup     " store backup files in ~/.vim/backup
+set hidden                               " keep buffers around when closed
+set linebreak                            " wrap at words
+set number                               " show line numbers
+set numberwidth=4                        " reserve 4 columns for line numbers
+set cursorline                           " highlight column with curosr in it
+set noshowcmd                            " show commands in progress
+set backspace=indent,eol,start           " make backspace work in insert mode
+set hlsearch                             " highlight search matches
+set ignorecase                           " ignore case in search
+set incsearch                            " show search matches while typing
+set smartcase                            " don't ignore case when we include an upper-case letter
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab               " tab -> spaces
-set wildmenu                " use menu for tab completion
-set wildmode=longest,full   " don't use menu for first completion
+set expandtab                            " tab -> spaces
+set wildmenu                             " use menu for tab completion
+set wildmode=longest,full                " don't use menu for first completion
 set pumheight=8
 set splitbelow
 set splitright
