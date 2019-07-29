@@ -10,7 +10,9 @@
 
 fresh freshshell/fresh bin/fresh --bin
 
-fresh-options --file=~/.zshrc --marker="###" --filter="perl -pe 'chomp if eof'"
+fresh zshenv --file
+
+fresh-options --file=~/.zshrc --marker="###" 
   fresh zshrc/\*.zsh
   fresh bindings/\*.zsh
   fresh variables/*.zsh
@@ -31,6 +33,8 @@ fresh-options --file=~/.config/nvim/init.vim
 fresh-options
 
 fresh tmux.conf --file
+
+fresh fdignore --file
 
 fresh harrygallagher4/homebrew-pkgconfig-path homebrew-pkgconfig-path.zsh --bin=~/bin/homebrew-pkgconfig-path
 fresh harrygallagher4/gravatar.sh gravatar.sh --bin=~/bin/gravatar
