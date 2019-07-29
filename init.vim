@@ -20,7 +20,6 @@ Plug 'tpope/vim-liquid'
 " Interface
 Plug 'airblade/vim-gitgutter'
 Plug 'ayu-theme/ayu-vim'
-" Plug 'chriskempson/base16-vim'
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'mhinz/vim-startify'
 
@@ -30,31 +29,9 @@ filetype plugin indent on
 
 let mapleader = "\<Space>"
 
-" function! Base16_customize() abort
-"   call Base16hi("LineNr", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-"   call Base16hi("CursorLineNr", "", "", "", "", "bold,italic", "")
-"   call Base16hi("DiffAdd", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-"   call Base16hi("DiffChange", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-"   call Base16hi("DiffDelete", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-"   call Base16hi("DiffText", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-"   call Base16hi("GitGutterAdd", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-"   call Base16hi("GitGutterChange", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-"   call Base16hi("GitGutterDelete", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-"   call Base16hi("GitGutterText", "", g:base16_gui00, "", g:base16_cterm00, "italic", "")
-" endfunction
-
-" augroup base16_custom
-"     autocmd!
-"     autocmd ColorScheme base16-* call Base16_customize()
-" augroup END
-
 "syntax on
 set termguicolors
 let ayucolor="mirage"
-" if filereadable(expand("~/.vimrc_background"))
-"   let base16colorspace=256
-"   source ~/.vimrc_background
-" endif
 set background=dark
 colorscheme ayu
 
