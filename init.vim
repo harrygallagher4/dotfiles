@@ -74,6 +74,9 @@ let g:startify_lists = [
   \ { 'type': 'sessions',  'header': ['   Sessions']       },
   \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      }]
 
+let g:fzf_layout = { 'up': '~25%' }
+let g:fzf_buffers_jump = 1
+
 " windows
 nnoremap <c-`> :10new<cr>:term<cr>A
 nnoremap \ :vnew<cr>
@@ -101,6 +104,10 @@ tnoremap <c-l> <c-\><c-n><c-w>l
 " tabs
 nnoremap <silent> <leader><c-l> :+tabnext<cr>
 nnoremap <silent> <leader><c-h> :-tabnext<cr>
+
+" FZF mappings
+nnoremap <silent> <leader>p :Files<cr>
+nnoremap <silent> <leader><s-p> :Commands<cr>
 
 " Key mappings
 inoremap jk <esc>
