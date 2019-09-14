@@ -78,12 +78,18 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 4
 
 let g:startify_customm_header = []
-let g:startify_bookmarks = [{',': '~/.dotfiles/init.vim'}]
+let g:startify_bookmarks = [
+      \ {',': '~/.dotfiles/init.vim'},
+      \ {'d': '~/.dotfiles/'},
+      \ '~/.config/kitty/kitty.conf',
+      \ '~/.dotfiles/zshrc/init.zsh',
+      \ '~/.dotfiles/freshrc']
 let g:startify_lists = [
-  \ { 'type': 'files',     'header': ['   MRU']            },
-  \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-  \ { 'type': 'sessions',  'header': ['   Sessions']       },
-  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      }]
+      \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+      \ { 'type': 'files',     'header': ['   MRU']            },
+      \ { 'type': 'sessions',  'header': ['   Sessions']       },
+      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      }]
+let g:startify_session_dir = '~/.config/nvim/sessions'
 
 let g:fzf_layout = { 'up': '~25%' }
 let g:fzf_buffers_jump = 1
