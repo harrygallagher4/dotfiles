@@ -1,3 +1,5 @@
+. /usr/local/opt/asdf/asdf.sh
+
 autoload -U promptinit; promptinit
 autoload -Uz compinit && compinit
 

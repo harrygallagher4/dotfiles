@@ -16,8 +16,6 @@ else
   export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 fi
 
-. /usr/local/opt/asdf/asdf.sh
-
 source ~/.fresh/build/shell.sh
 
 export FZF_DEFAULT_COMMAND='fd --type f'
