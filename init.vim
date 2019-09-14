@@ -74,6 +74,8 @@ set wildmenu                             " use menu for tab completion
 set wildmode=longest,full                " don't use menu for first completion
 set writebackup
 
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
 
 let g:startify_customm_header = []
 let g:startify_bookmarks = [{',': '~/.dotfiles/init.vim'}]
