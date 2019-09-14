@@ -145,6 +145,8 @@ inoremap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
 nnoremap <tab> :b #<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>Q :wq<cr>
+" yank to clipboard until next space
+nnoremap <leader>y :normal "+yt <cr>
 " edit (neo)vim settings
 nnoremap <leader>, :e ~/.dotfiles/init.vim<cr>
 
