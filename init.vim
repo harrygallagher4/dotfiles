@@ -12,7 +12,6 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'tpope/vim-surround'
 
 " Language support
-Plug 'l04m33/vlime', {'rtp': 'vim/'}
 " Plug 'l04m33/vlime', {'rtp': 'vim/'}
 " Plug 'leafgarland/typescript-vim'
 " Plug 'tpope/vim-liquid'
