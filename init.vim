@@ -144,9 +144,6 @@ inoremap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<c-j>"
 inoremap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<c-k>"
 nnoremap <tab> :b #<cr>
 nnoremap <leader>w :w<cr>
-nnoremap j gj
-nnoremap k gk
-
 " edit (neo)vim settings
 nnoremap <leader>, :e ~/.dotfiles/init.vim<cr>
 
