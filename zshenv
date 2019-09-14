@@ -18,4 +18,4 @@ fi
 
 source ~/.fresh/build/shell.sh
 
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='fd -H --type f'
