@@ -165,10 +165,6 @@ if !exists("g:autocmds_loaded")
   augroup END
 endif
 
-function! MaybeStartInsertInTerminal()
-    if !exists('g:dont_start_insert_in_terminal')
-        startinsert
-    endif
 function! SetExplorerWindow()
   let t:explorer_window = win_getid()
 endfunction
@@ -181,27 +177,26 @@ function! OpenOrGoToExplorerWindow()
   endif
 endfunction
 
-function! ResetCustomAutocmds()
-    augroup harry
-        autocmd!
-    augroup END
-    unlet g:autocmds_loaded 
+function! MaybeStartInsertInTerminal()
+  if !exists('g:dont_start_insert_in_terminal')
+    startinsert
+  endif
 endfunction
 
 function! FindActiveTerminal()
-    let g:dont_start_insert_in_terminal=1
-    let g:last_window=bufwinid("%")
-    let g:active_terminal=0
-    windo call SetActiveTerminal()
-    call win_gotoid(g:last_window)
-    unlet g:dont_start_insert_in_terminal
+  let g:dont_start_insert_in_terminal=1
+  let g:last_window=bufwinid("%")
+  let g:active_terminal=0
+  windo call SetActiveTerminal()
+  call win_gotoid(g:last_window)
+  unlet g:dont_start_insert_in_terminal
 endfunction
 
 function! SetActiveTerminal()
-    if exists('b:terminal_job_id')
-        let g:active_terminal = b:terminal_job_id
-    endif
-    return 0
+  if exists('b:terminal_job_id')
+    let g:active_terminal = b:terminal_job_id
+  endif
+  return 0
 endfunction
 
 " reset cursor on leave
