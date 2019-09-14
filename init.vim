@@ -21,7 +21,6 @@ Plug 'sheerun/vim-polyglot'
 " Interface
 Plug 'airblade/vim-gitgutter'
 Plug 'ayu-theme/ayu-vim'
-Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'mhinz/vim-startify'
 
 call plug#end()
