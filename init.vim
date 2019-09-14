@@ -32,17 +32,15 @@ Plug 'mhinz/vim-startify'
 call plug#end() " -------------------------------------------------------------}
 
 filetype plugin indent on
-
 let mapleader = "\<Space>"
 
-"syntax on
 set termguicolors
 let ayucolor="mirage"
 set background=dark
 colorscheme ayu
+let g:vim_jsx_pretty_colorful_config=1
 
-" highlight LineNr ctermfg=8
-let g:jsx_ext_required=0                 " use jsx syntax for .js files
+
 
 set autoread                             " read changes to unmodified buffers
 set nobackup
