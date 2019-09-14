@@ -17,6 +17,7 @@ Plug 'tpope/vim-surround'
 " Plug 'l04m33/vlime', {'rtp': 'vim/'}
 " Plug 'leafgarland/typescript-vim'
 " Plug 'tpope/vim-liquid'
+Plug 'andymass/vim-matchup'
 Plug 'sheerun/vim-polyglot'
 
 " Interface
