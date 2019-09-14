@@ -137,6 +137,7 @@ nnoremap <silent> <leader>t :Rg<cr>
 nnoremap <silent> <leader><s-t> :Commands<cr>
 nnoremap <silent> <leader>/ :Lines<cr>
 nnoremap <silent> <leader>? :BLines<cr>
+nnoremap <silent> <leader>e :call OpenOrGoToExplorerWindow()<cr>
 
 " Key mappings
 inoremap jk <esc>
