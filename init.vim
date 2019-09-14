@@ -121,6 +121,14 @@ nnoremap <c-l> <c-w>l
 inoremap <c-l> <esc><c-w>l
 tnoremap <c-l> <c-\><c-n><c-w>l
 
+augroup netrw_map
+  autocmd!
+  autocmd filetype netrw call NetrwMap()
+augroup END
+
+function! NetrwMap()
+  nnoremap <buffer> <c-l> <c-w>l
+endfunction
 
 " FZF mappings
 nnoremap <silent> <leader>p :Files<cr>
