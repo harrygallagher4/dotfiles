@@ -101,6 +101,11 @@ nnoremap \ :vnew<cr>
 " binding makes sense. maybe one day my muscle memory will change
 nnoremap \| :vnew<cr>
 nnoremap - :new<cr>
+"let g:fireplace_cljs_repl =
+"    \ '(cider.piggieback/cljs-repl (cljs.repl.nashorn/repl-env))'
+
+let g:fireplace_cljs_repl =
+      \ '(cider.piggieback/cljs-repl (figwheel-sidecar.repl-api/repl-env))'
 
 nnoremap <c-x> :wincmd c<cr>
 tnoremap <c-x> <c-\><c-n>:wincmd c<cr>
