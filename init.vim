@@ -5,12 +5,15 @@ call plug#begin('~/.config/nvim/plugins')
 " Functionality
 Plug '/usr/local/opt/fzf'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'honza/vim-snippets'
 Plug 'inkarkat/vim-ingo-library'
 Plug 'inkarkat/vim-SyntaxRange'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-slash'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/jsonc.vim'
+Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-surround'
 
 " Language support
