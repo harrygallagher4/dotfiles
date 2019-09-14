@@ -7,7 +7,7 @@
 # colorize output
 alias lx="gls --group-directories-first --color -NXp"
 
-alias serve="python -m SimpleHTTPServer"
+alias serve="python2 -m SimpleHTTPServer"
 alias gman=man-preview
 alias pip=pip3
 alias python=python3
