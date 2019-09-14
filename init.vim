@@ -121,9 +121,6 @@ nnoremap <c-l> <c-w>l
 inoremap <c-l> <esc><c-w>l
 tnoremap <c-l> <c-\><c-n><c-w>l
 
-" tabs
-nnoremap <silent> <leader><c-l> :+tabnext<cr>
-nnoremap <silent> <leader><c-h> :-tabnext<cr>
 
 " FZF mappings
 nnoremap <silent> <leader>p :Files<cr>
