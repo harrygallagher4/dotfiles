@@ -132,7 +132,11 @@ endfunction
 
 " FZF mappings
 nnoremap <silent> <leader>p :Files<cr>
-nnoremap <silent> <leader><s-p> :Commands<cr>
+nnoremap <silent> <leader>o :Buffers<cr>
+nnoremap <silent> <leader>t :Rg<cr>
+nnoremap <silent> <leader><s-t> :Commands<cr>
+nnoremap <silent> <leader>/ :Lines<cr>
+nnoremap <silent> <leader>? :BLines<cr>
 
 " Key mappings
 inoremap jk <esc>
