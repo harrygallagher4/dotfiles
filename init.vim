@@ -4,7 +4,6 @@ call plug#begin('~/.config/nvim/plugins')
 
 " Functionality
 Plug '/usr/local/opt/fzf'
-Plug 'bhurlow/vim-parinfer'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
