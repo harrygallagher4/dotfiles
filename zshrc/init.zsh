@@ -10,6 +10,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 source $ZSH/oh-my-zsh.sh
 source ~/.purepower
 
+kitty + complete setup zsh | source /dev/stdin
+
 # Base16 Shell
 #BASE16_SHELL="$HOME/.config/base16-shell/"
 #[ -n "$PS1" ] && \
