@@ -17,7 +17,6 @@ Plug 'l04m33/vlime', {'rtp': 'vim/'}
 " Plug 'leafgarland/typescript-vim'
 " Plug 'tpope/vim-liquid'
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-liquid'
 
 " Interface
 Plug 'airblade/vim-gitgutter'
