@@ -149,6 +149,7 @@ nnoremap <leader>Q :wq<cr>
 nnoremap <leader>y :normal "+yt <cr>
 " edit (neo)vim settings
 nnoremap <leader>, :e ~/.dotfiles/init.vim<cr>
+nnoremap <plug>(slash-after) zz
 
 if !exists("g:autocmds_loaded")
     augroup harry
