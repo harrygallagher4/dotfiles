@@ -152,7 +152,7 @@ nnoremap <leader>, :e ~/.dotfiles/init.vim<cr>
 nnoremap <plug>(slash-after) zz
 
 if !exists("g:autocmds_loaded")
-    augroup harry
+  augroup harry
     autocmd!
     let g:autocmds_loaded = 1
 
@@ -160,13 +160,24 @@ if !exists("g:autocmds_loaded")
     autocmd BufWritePost */.dotfiles/init.vim execute 'silent !fresh >/dev/null'
     autocmd TermOpen * set filetype=term
     autocmd WinEnter term://* call MaybeStartInsertInTerminal()
-    augroup END
+    autocmd FileType netrw call SetExplorerWindow()
+  augroup END
 endif
 
 function! MaybeStartInsertInTerminal()
     if !exists('g:dont_start_insert_in_terminal')
         startinsert
     endif
+function! SetExplorerWindow()
+  let t:explorer_window = win_getid()
+endfunction
+
+function! OpenOrGoToExplorerWindow()
+  if exists('t:explorer_window')
+    call win_gotoid(t:explorer_window)
+  else
+    execute 'Lexplore'
+  endif
 endfunction
 
 function! ResetCustomAutocmds()
