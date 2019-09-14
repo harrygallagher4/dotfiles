@@ -1,5 +1,6 @@
 set nocompatible
 
+" {-----------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugins')
 
 " Functionality
@@ -28,7 +29,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ayu-theme/ayu-vim'
 Plug 'mhinz/vim-startify'
 
-call plug#end()
+call plug#end() " -------------------------------------------------------------}
 
 filetype plugin indent on
 
