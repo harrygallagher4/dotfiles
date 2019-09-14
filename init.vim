@@ -42,34 +42,38 @@ let g:vim_jsx_pretty_colorful_config=1
 
 let &showbreak = '>>> '
 
+set backupdir=~/.config/nvim/.backup     " store backup files
+set directory=~/.config/nvim/.backup     " store swap files
+set undodir=~/.config/nvim/.undofiles    " store undo files
 
 set autoread                             " read changes to unmodified buffers
-set nobackup
-set writebackup
-set directory=~/.config/nvim/.backup     " store swap files in ~/.vim/backup
-set backupdir=~/.config/nvim/.backup     " store backup files in ~/.vim/backup
-set hidden                               " keep buffers around when closed
-set linebreak                            " wrap at words
-set number                               " show line numbers
-set numberwidth=4                        " reserve 4 columns for line numbers
-set cursorline                           " highlight column with curosr in it
-set noshowcmd                            " show commands in progress
 set backspace=indent,eol,start           " make backspace work in insert mode
+set cursorline                           " highlight column with curosr in it
+set eadirection=hor
+set expandtab                            " tab -> spaces
+set hidden                               " keep buffers around when closed
 set hlsearch                             " highlight search matches
 set ignorecase                           " ignore case in search
 set incsearch                            " show search matches while typing
-set smartcase                            " don't ignore case when we include an upper-case letter
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab                            " tab -> spaces
-set wildmenu                             " use menu for tab completion
-set wildmode=longest,full                " don't use menu for first completion
+set linebreak                            " wrap at words
+set nobackup
+set noequalalways                        " don't resize windows when I open a new one
+set number                               " show line numbers
 set pumheight=8
+set scrolloff=3
+set shiftwidth=4
+set showcmd                              " show commands in progress
+set signcolumn=yes
+set smartcase                            " don't ignore case when we include an upper-case letter
+set softtabstop=4
 set splitbelow
 set splitright
+set tabstop=4
 set undofile
-set undodir=~/.config/nvim/.undofiles
+set wildmenu                             " use menu for tab completion
+set wildmode=longest,full                " don't use menu for first completion
+set writebackup
+
 
 let g:startify_customm_header = []
 let g:startify_bookmarks = [{',': '~/.dotfiles/init.vim'}]
