@@ -94,33 +94,31 @@ let g:startify_session_dir = '~/.config/nvim/sessions'
 let g:fzf_layout = { 'up': '~25%' }
 let g:fzf_buffers_jump = 1
 
-" windows
-nnoremap <c-`> :10new<cr>:term<cr>A
-nnoremap \ :vnew<cr>
-" my brain likes to use shift+\ instead of \ but I still think the
-" binding makes sense. maybe one day my muscle memory will change
-nnoremap \| :vnew<cr>
-nnoremap - :new<cr>
 "let g:fireplace_cljs_repl =
 "    \ '(cider.piggieback/cljs-repl (cljs.repl.nashorn/repl-env))'
 
 let g:fireplace_cljs_repl =
       \ '(cider.piggieback/cljs-repl (figwheel-sidecar.repl-api/repl-env))'
 
+" windows
 nnoremap <c-x> :wincmd c<cr>
 tnoremap <c-x> <c-\><c-n>:wincmd c<cr>
 
 " <c-hjkl> for window movement
 nnoremap <c-h> <c-w>h
+inoremap <c-h> <esc><c-w>h
 tnoremap <c-h> <c-\><c-n><c-w>h
 
 nnoremap <c-j> <c-w>j
+inoremap <c-j> <esc><c-w>j
 tnoremap <c-j> <c-\><c-n><c-w>j
 
 nnoremap <c-k> <c-w>k
+inoremap <c-k> <esc><c-w>k
 tnoremap <c-k> <c-\><c-n><c-w>k
 
 nnoremap <c-l> <c-w>l
+inoremap <c-l> <esc><c-w>l
 tnoremap <c-l> <c-\><c-n><c-w>l
 
 " tabs
