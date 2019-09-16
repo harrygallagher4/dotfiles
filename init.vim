@@ -40,6 +40,11 @@ set background=dark
 colorscheme ayu
 let g:vim_jsx_pretty_colorful_config=1
 
+augroup custom_filetypes
+  autocmd!
+  autocmd BufNewFile,BufRead *.prisma set filetype=graphql
+augroup END
+
 let &showbreak = '>>> '
 
 set backupdir=~/.config/nvim/.backup     " store backup files
