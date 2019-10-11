@@ -44,6 +44,8 @@ endfunction
 let g:coc_snippet_next = '<tab>'
 let g:coc_snippet_prev = '<s-tab>'
 
-command! -nargs=0 Format :call CocAction('format')
+command! -nargs=0 Format    :call CocAction('format')
+command! -nargs=? Fold      :call CocAction('fold', <f-args>)
+command! -nargs=0 Organize  :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " end coc.nvim
