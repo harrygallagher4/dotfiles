@@ -16,6 +16,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'neoclide/jsonc.vim'
 Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-surround'
+Plug 'Townk/vim-autoclose'
 
 " Language support
 " Plug 'l04m33/vlime', {'rtp': 'vim/'}
