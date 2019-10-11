@@ -70,6 +70,7 @@ set shiftwidth=4
 set showcmd                              " show commands in progress
 set signcolumn=yes
 set smartcase                            " don't ignore case when we include an upper-case letter
+set smarttab
 set softtabstop=4
 set splitbelow
 set splitright
