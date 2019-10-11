@@ -99,11 +99,13 @@ let g:startify_session_dir = '~/.config/nvim/sessions'
 let g:fzf_layout = { 'up': '~25%' }
 let g:fzf_buffers_jump = 1
 
-"let g:fireplace_cljs_repl =
-"    \ '(cider.piggieback/cljs-repl (cljs.repl.nashorn/repl-env))'
+let g:fireplace_cljs_repl_type = 'figwheel-sidecar'
 
-let g:fireplace_cljs_repl =
-      \ '(cider.piggieback/cljs-repl (figwheel-sidecar.repl-api/repl-env))'
+if g:fireplace_cljs_repl_type ==? "nashorn"
+  let g:fireplace_cljs_repl = '(cider.piggieback/cljs-repl (cljs.repl.nashorn/repl-env))'
+elseif g:fireplace_cljs_repl_type ==? "figwheel-sidecar"
+  let g:fireplace_cljs_repl = '(cider.piggieback/cljs-repl (figwheel-sidecar.repl-api/repl-env))'
+endif
 
 " windows
 nnoremap <c-x> :wincmd c<cr>
